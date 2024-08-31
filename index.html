@@ -1,5 +1,3 @@
-
-
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -117,18 +115,22 @@
 
         .experience-item {
             display: flex;
+            flex-direction: column;
             align-items: center;
             margin-bottom: 30px;
-            justify-content: center;
+            padding: 20px;
+            border: 1px solid #00d4ff;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.8);
         }
         
         .experience-item img {
-            max-width: 100px;
-            margin-right: 20px;
+            max-width: 80px;
+            margin-bottom: 10px;
         }
         
-        .experience-item p {
-            margin: 0;
+        .experience-item div {
+            text-align: center;
         }
 
         .skills-list, .tools-list {
@@ -168,6 +170,35 @@
             font-size: 14px;
             color: #ffffff;
         }
+
+        .certification-item {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .certification-item a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .certification-item a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .navbar .main-nav {
+                flex-direction: column;
+            }
+            
+            .navbar .main-nav li {
+                margin: 10px 0;
+            }
+            
+            .experience-item {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
@@ -181,7 +212,7 @@
             <li><a href="#certification">Certification</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="Resume.pdf" class="nav-links" style="background-color: rgb(177, 247, 214,0.5);"><i class="fa fa-download"></i>&nbsp;&nbsp; Resume</a></li>
+            <li><a href="Resume.pdf" class="nav-links" style="background-color: rgba(177, 247, 214, 0.5);"><i class="fa fa-download"></i>&nbsp;&nbsp; Resume</a></li>
         </ul>
     </nav>
     
@@ -222,50 +253,66 @@
         <div class="section">
             <h1>Tools</h1>
             <div class="tools-list">
-                <img src="Azure.jfif" alt="Azure AD" title="Azure AD">
-                <img src="nexthink-dex-logo.png" alt="Nexthink DEX" title="Nexthink DEX">
-                <img src="servicenow-logo.png" alt="ServiceNow" title="ServiceNow">
-                <img src="jira-logo.png" alt="JIRA" title="JIRA">
-                <img src="jumpcloud-logo.png" alt="Jumpcloud" title="Jumpcloud">
+               
+
+ <img src="ServiceNow-Logo-2021.png" alt="ServiceNow" title="ServiceNow">
+                <img src="SCCM-Logo.png" alt="SCCM" title="SCCM">
+                <img src="sccm.png" alt="SCCM" title="SCCM">
+                <img src="vmware.png" alt="VMware" title="VMware">
+                <img src="veritas.png" alt="Veritas" title="Veritas">
             </div>
         </div>
-        
+
         <div id="projects" class="section">
             <h1>Projects</h1>
-            <p>We have implemented an AI chatbot for our internal team to enhance our Desk support and leverage the benefits of
-
- AI.</p>
+            <p>Details about projects will go here.</p>
         </div>
         
         <div id="certification" class="section">
-            <h1>Certification Courses</h1>
-            <p>Nexthink DEX</p>
-            <p>MS365 Fundamentals</p>
-            <p>Cloud Computing</p>
+            <h1>Certifications</h1>
+            <div class="certification-item">
+                <a href="https://www.coursera.org/account/accomplishments/certificate/XXXX" target="_blank">Cloud Computing</a>
+            </div>
+            <div class="certification-item">
+                <a href="https://www.coursera.org/account/accomplishments/certificate/YYYY" target="_blank">Nexthink troubleshooting</a>
+            </div>
         </div>
         
         <div id="experience" class="section">
             <h1>Experience</h1>
             <div class="experience-item">
-                <img src="cognizant-logo.png" alt="Cognizant" title="Cognizant">
+                <img src="company1-logo.png" alt="Company 1">
                 <div>
-                    <h2>Cognizant</h2>
-                    <p><strong>Senior System Engineer</strong><br>2022-Present</p>
-                    <p>Administered Office365 environment, including Exchange Online, SharePoint, Teams, and OneDrive.<br>
-                    Managed user accounts, permissions, and access controls.</p>
+                    <h2>Senior System Engineer - Cognizant</h2>
+                    <p>Details about your role and achievements at Company 1.</p>
+                    <div class="skills-list">
+                        <img src="skill1.png" alt="Skill 1" title="Skill 1">
+                        <img src="skill2.png" alt="Skill 2" title="Skill 2">
+                    </div>
                 </div>
             </div>
-            <!-- Add more experience items as needed -->
+            <div class="experience-item">
+                <img src="company2-logo.png" alt="Company 2">
+                <div>
+                    <h2>Job Title - Company 2</h2>
+                    <p>Details about your role and achievements at Company 2.</p>
+                    <div class="skills-list">
+                        <img src="skill3.png" alt="Skill 3" title="Skill 3">
+                        <img src="skill4.png" alt="Skill 4" title="Skill 4">
+                    </div>
+                </div>
+            </div>
         </div>
         
         <div id="contact" class="section">
-            <h1>Contact</h1>
-            <p>If you have any questions or want to get in touch, please reach out through one of the following channels:</p>
+            <h1>Contact Me</h1>
+            <form class="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
             <div class="contact-icons">
-                <div>
-                    <i class="fa fa-envelope"></i>
-                    <span>Email</span>
-                </div>
                 <div>
                     <i class="fa fa-linkedin"></i>
                     <span>LinkedIn</span>
@@ -273,6 +320,14 @@
                 <div>
                     <i class="fa fa-github"></i>
                     <span>GitHub</span>
+                </div>
+                <div>
+                    <i class="fa fa-twitter"></i>
+                    <span>Twitter</span>
+                </div>
+                <div>
+                    <i class="fa fa-facebook"></i>
+                    <span>Facebook</span>
                 </div>
             </div>
         </div>
