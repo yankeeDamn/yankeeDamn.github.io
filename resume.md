@@ -18,7 +18,7 @@ Dedicated Technical Team Lead with extensive experience in AI/ML, focused on dev
 
 ### Technical Team Lead  
 **Company:** Cognizant  
-**Duration:** [Start Date] - Present  
+**Duration:** [2022] - Present  
 
 - Leading a team in developing AI-driven solutions and IT support, enhancing operational efficiency and data-driven decisions with Nexthink. 
 - Collaborating with Teams to identify processes requirements and deliver high-quality results within deadlines.
@@ -60,4 +60,5 @@ Dedicated Technical Team Lead with extensive experience in AI/ML, focused on dev
 ---
 
 ## References
-YANKEE MAJUMDER .
+YANKEE MAJUMDER 
+https://about.me/yankeemajumder
