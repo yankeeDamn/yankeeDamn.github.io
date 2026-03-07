@@ -1376,7 +1376,7 @@
     <!-- Projects (AI/ML) Section -->
     <section id="projects" class="section">
         <h1>Projects <span style="color:var(--accent-color)">(AI/ML)</span></h1>
-        <p class="section-subtitle">Featured machine-learning and NLP projects — loaded from <code>data/projects.json</code></p>
+        <p class="section-subtitle">Featured ML and NLP projects — loaded from <code>data/projects.json</code></p>
         <div class="aiml-projects-grid" id="aimlProjectsGrid" role="list" aria-label="AI/ML Projects">
             <!-- Cards rendered by JS -->
         </div>
@@ -1719,6 +1719,8 @@
 
         // ── AI/ML Projects: fetch & render ──
         (function () {
+            const CACHE_DURATION_MS = 3600000; // 1 hour
+            const MS_PER_DAY = 86400000;
             const grid = document.getElementById('aimlProjectsGrid');
             if (!grid) return;
 
@@ -1785,7 +1787,7 @@
 
                 try { cached = JSON.parse(localStorage.getItem(cacheKey)); } catch (e) { /* ignore */ }
 
-                if (cached && (Date.now() - cached.ts < 3600000)) {
+                if (cached && (Date.now() - cached.ts < CACHE_DURATION_MS)) {
                     renderMeta(slug, cached);
                     return;
                 }
@@ -1815,7 +1817,7 @@
                 if (info.updated) {
                     var d = new Date(info.updated);
                     var now = new Date();
-                    var diff = Math.floor((now - d) / 86400000);
+                    var diff = Math.floor((now - d) / MS_PER_DAY);
                     var label = diff < 1 ? 'today' : diff < 30 ? diff + 'd ago' : diff < 365 ? Math.floor(diff / 30) + 'mo ago' : Math.floor(diff / 365) + 'y ago';
                     parts.push('<span><i class="fas fa-clock"></i> ' + label + '</span>');
                 }
