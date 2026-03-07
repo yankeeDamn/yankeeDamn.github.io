@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "term-deposit-predictor",
+    "title": "Term Deposit Predictor (Bank Marketing)",
+    "icon": "fas fa-chart-line",
+    "description": "End-to-end ML pipeline to predict term deposit subscription using bank marketing data; trained, deployed, and tested. Includes Flask API and Container/Cloud deployment (Vertex AI/Cloud Run).",
+    "highlights": [
+      "Feature engineering + model selection (Logistic/Tree models)",
+      "ROC-AUC evaluation, calibration, explainability (SHAP optional)",
+      "Dockerized + CI-ready for deployment"
+    ],
+    "tags": ["Python", "scikit-learn", "Flask", "Docker", "Vertex AI", "MLOps"],
+    "repo": "https://github.com/yankeeDamn/term-deposit-predictor",
+    "demo": "",
+    "image": "assets/projects/term-deposit-predictor.png"
+  },
+  {
+    "slug": "sokal-bela",
+    "title": "Sokal Bela — Bengali NLP Utilities",
+    "icon": "fas fa-book-open",
+    "description": "Lightweight Bengali language utilities and experiments—tokenization, text preprocessing, and basic ML/NLP workflows.",
+    "highlights": [
+      "Bengali text normalization & tokenization",
+      "Small model experiments and pipelines",
+      "Built for educational + utility use"
+    ],
+    "tags": ["Python", "NLP", "Bengali", "Text Processing"],
+    "repo": "https://github.com/yankeeDamn/Sokal-Bela",
+    "demo": "",
+    "image": "assets/projects/sokal-bela.png"
+  },
+  {
+    "slug": "wbcs-rag-chatbot",
+    "title": "WBCS RAG Chatbot (Bengali + English)",
+    "icon": "fas fa-comments",
+    "description": "Retrieval-Augmented Generation chatbot for WBCS prep using Vertex AI Embeddings + Vector Search + Gemini; bilingual Q&A workflow.",
+    "highlights": [
+      "RAG pipeline with embeddings & vector store",
+      "Bilingual Bengali/English queries for WBCS",
+      "Deployable with minimal infra on Vertex"
+    ],
+    "tags": ["RAG", "Vector Search", "Vertex AI", "GenAI", "Bengali", "LLM"],
+    "repo": "https://github.com/yankeeDamn/wbcs-rag-chatbot",
+    "demo": "",
+    "image": "assets/projects/wbcs-rag-chatbot.png"
+  }
+]
