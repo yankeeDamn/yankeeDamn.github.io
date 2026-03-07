@@ -1785,7 +1785,7 @@
                 var cacheKey = 'gh_stats_' + slug;
                 var cached = null;
 
-                try { cached = JSON.parse(localStorage.getItem(cacheKey)); } catch (e) { /* ignore */ }
+                try { cached = JSON.parse(localStorage.getItem(cacheKey)); } catch (e) { console.warn('GitHub stats cache read failed', e); }
 
                 if (cached && (Date.now() - cached.ts < CACHE_DURATION_MS)) {
                     renderMeta(slug, cached);
@@ -1802,7 +1802,7 @@
                             updated: d.pushed_at || '',
                             ts: Date.now()
                         };
-                        try { localStorage.setItem(cacheKey, JSON.stringify(info)); } catch (e) { /* ignore */ }
+                        try { localStorage.setItem(cacheKey, JSON.stringify(info)); } catch (e) { console.warn('GitHub stats cache write failed', e); }
                         renderMeta(slug, info);
                     })
                     .catch(function () { /* graceful fallback: no stats shown */ });
